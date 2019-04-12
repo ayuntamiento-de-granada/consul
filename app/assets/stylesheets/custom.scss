@@ -3,3 +3,41 @@
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
+
+/*************************************************/
+/* Top Bar */
+/*************************************************/
+
+.top-bar {
+    background: #fff !important;
+    color: #0a0a0a;
+}
+
+header {
+    background: #fff;
+}
+
+.top-bar {
+    .menu > li a {
+        color: #0a0a0a;
+    }
+
+    .menu > li .button {
+        background: $brand;
+        color: #fff;
+    }
+
+    .top-bar-title {
+    line-height: $line-height;
+
+    a img {
+      height: 65px;
+      margin: 0;
+      width: auto;
+
+      @include breakpoint(medium up) {
+        height: 100px;
+      }
+    }
+  }
+}

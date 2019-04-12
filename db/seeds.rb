@@ -9,8 +9,8 @@ end
 
 # Names for the moderation console, as a hint for moderators
 # to know better how to assign users with official positions
-Setting["official_level_1_name"] = "Cargo oficial 1"
-Setting["official_level_2_name"] = "Cargo oficial 2"
+Setting["official_level_1_name"] = "Concejal"
+Setting["official_level_2_name"] = "Técnico"
 Setting["official_level_3_name"] = "Cargo oficial 3"
 Setting["official_level_4_name"] = "Cargo oficial 4"
 Setting["official_level_5_name"] = "Cargo oficial 5"
@@ -47,23 +47,23 @@ Setting["html.per_page_code_head"] = ""
 Setting["html.per_page_code_body"] = ""
 
 # Social settings
-Setting["twitter_handle"] = nil
-Setting["twitter_hashtag"] = nil
-Setting["facebook_handle"] = nil
+Setting["twitter_handle"] = "@aytogr"
+Setting["twitter_hashtag"] = "#granadaparticipa"
+Setting["facebook_handle"] = "AyuntamientodeGranada"
 Setting["youtube_handle"] = nil
 Setting["telegram_handle"] = nil
-Setting["instagram_handle"] = nil
+Setting["instagram_handle"] = "aytogranada"
 
 # Public-facing URL of the app.
 Setting["url"] = "http://example.com"
 
 # CONSUL installation's organization name
-Setting["org_name"] = "CONSUL"
+Setting["org_name"] = "Ayuntamiento de Granada"
 
 # Meta tags for SEO
-Setting["meta_title"] = nil
-Setting["meta_description"] = nil
-Setting["meta_keywords"] = nil
+Setting["meta_title"] = "Ayuntamiento de Granada"
+Setting["meta_description"] = "Portal de participación del Ayuntamiento de Granada"
+Setting["meta_keywords"] = "Participación ciudadana, granada, votaciones, debates, propuestas"
 
 # Processes
 Setting["process.debates"] = true
@@ -98,8 +98,8 @@ Setting["proposal_notification_minimum_interval_in_days"] = 3
 Setting["direct_message_max_per_day"] = 3
 
 # Email settings
-Setting["mailer_from_name"] = "CONSUL"
-Setting["mailer_from_address"] = "noreply@consul.dev"
+Setting["mailer_from_name"] = "Ayuntamiento de Granada"
+Setting["mailer_from_address"] = "granadaparticipa@granada.org"
 
 # Verification settings
 Setting["min_age_to_participate"] = 16

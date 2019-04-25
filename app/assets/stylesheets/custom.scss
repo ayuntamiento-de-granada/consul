@@ -15,6 +15,7 @@
 /*  04. Footer
 /*  05. Welcome / Call action
 /*  06. Images
+/*  07. Auth page
 /*
 /*************************************************/
 
@@ -551,4 +552,12 @@ position: relative;
   max-width: 300px;
   height: auto;
   object-fit: cover;
+}
+
+
+/*************************************************/
+/* 07. Auth page */
+/*************************************************/
+.auth-image h1 {
+  background: rgba(255,255,255,0.33);
 }

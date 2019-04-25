@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   # More info pages
   get "help",             to: "pages#show", id: "help/index",             as: "help"
   get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
-  get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
+  get 'mas-informacion/faq', to: 'pages#show', id: 'help/faq/index',      as: 'faq'
   get 'proposals_law',    to: 'pages#show', id: 'proposals_law/index',    as: 'proposals_law'
 
   # Static pages

@@ -63,6 +63,12 @@
                                 title: t("shared.go_to_page") + t("layouts.header.help") %>
       </li>
     <% end %>
+      <li>
+        <%= layout_menu_link_to "Procesos participativos",
+                                proposals_law_path,
+                                current_page?(proposals_law_path),
+                                title: t("shared.go_to_page") + "Procesos Participativos" %>
+      </li>
 
     <%= raw content_block("subnavigation_right", I18n.locale) %>
   </ul>

@@ -9,13 +9,12 @@
 /*  Table of content
 /*
 /*  00. Basics
-/*  02. Margins
-/*  03. Top Bar
-/*  04. Header
-/*  05. Navbar
-/*  06. Footer
-/*  07. Welcome / Call action
-/*  08. Images
+/*  01. Margins
+/*  02. Header
+/*  03. Navbar
+/*  04. Footer
+/*  05. Welcome / Call action
+/*  06. Images
 /*
 /*************************************************/
 
@@ -28,7 +27,7 @@ a:focus {
 }
 
 /*************************************************/
-/* 02. Margins */
+/* 01. Margins */
 /*************************************************/
 .mt-50 {
   margin-top: 50px;
@@ -45,7 +44,7 @@ a:focus {
 }
 
 /*************************************************/
-/* 04. Header */
+/* 02. Header */
 /*************************************************/
 header {
   background: #fff;
@@ -99,7 +98,7 @@ header {
 }
 
 /*************************************************/
-/* 05. Navbar */
+/* 03. Navbar */
 /*************************************************/
 .menu-icon.dark::after {
   background: $brand;
@@ -217,6 +216,12 @@ header {
   }
 }
 
+@media print, screen and (min-width: 40em){
+  .subnavigation ul li {
+      display: inline-block;
+  }
+}
+
 .top-bar-right {
   
   .is-active {
@@ -312,8 +317,11 @@ header {
   max-width: none;
 }
 
+
+
+
 /*************************************************/
-/* 06. Footer */
+/* 04. Footer */
 /*************************************************/
 footer {
   color: $text;
@@ -432,7 +440,7 @@ position: relative;
 }
 
 /*************************************************/
-/* 07. Welcome / Call Action */
+/* 05. Welcome / Call Action */
 /*************************************************/
 .call-action {
   height: auto;
@@ -531,7 +539,7 @@ position: relative;
 
 
 /*************************************************/
-/* 08. Images */
+/* 06. Images */
 /*************************************************/
 .img-text {
   width: 100%;

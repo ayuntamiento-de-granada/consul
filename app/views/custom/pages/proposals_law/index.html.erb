@@ -34,7 +34,7 @@
       <div class="row section-content">
         <div class="small-12 column">
           <h3 id="deliberacion" data-magellan-target="deliberacion">
-            Deliberación Participativa
+            1. Deliberación Participativa
           </h3>
           <p>
             En esta sección se realizarán los procesos de Deliberación Participativa, estos son procesos de contraste de argumentos y motivaciones expuestos en un debate público integrado en un procedimiento de decisión o de formulación o adopción de una política pública en el que se abre un espacio por parte de los órganos competentes de la Administración pública andaluza para conocer los intereses, posiciones y propuestas de la ciudadanía y en los siguientes supuestos:
@@ -57,30 +57,10 @@
                               class: "button" %>
         </div>
       </div>
-
-      <div class="row section-content">
-        <div class="small-12 column">
-          <h3 id="consultas" data-magellan-target="consultas">
-            Consultas Participativas
-          </h3>
-          <p>
-            En esta sección se realizarán las Consultas Participativas. Estas consultas son el instrumento de participación ciudadana que tiene por objeto el conocimiento de la opinión de un determinado sector o colectivo de la población, mediante un sistema de votación de contenido no referendario, sobre asuntos de interés público que le afecten.
-          </p>
-        </div>
-        <div class="small-12 text-center">
-         <%= layout_menu_link_to t("layouts.header.poll_questions"),
-                                  polls_path,
-                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
-                                  accesskey: "3",
-                                  title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
-                                  class: "button" %>
-        </div>
-      </div>
-
       <div class="row section-content">
         <div class="small-12 column">
           <h3 id="presupuestos" data-magellan-target="presupuestos">
-            Presupuestos Participativos
+            2. Presupuestos Participativos
           </h3>
           <p>
             En esta sección se realizarán los procesos de Presupuestos Participativos, mediante los cuales se llevará  a cabo una priorización sobre aspectos determinados de sus presupuestos.  La finalidad de estos procesos es que la asignación de gasto del Ayuntamiento de Granada se haga teniendo en cuenta las prioridades manifestadas en un proceso participativo en el que se hayan oído previamente las opiniones, criterios y sensibilidades de la ciudadanía.
@@ -95,18 +75,131 @@
                                   class: "button" %>
         </div>
       </div>
-
       <div class="row section-content">
         <div class="small-12 column">
-          <h3 id="proposicion" data-magellan-target="proposicion">
-            Proposición de políticas públicas
+          <h3 id="presupuestos" data-magellan-target="presupuestos">
+            3. Proposición de políticas públicas
           </h3>
           <p>
-            En esta sección se realizará los procesos de participación ciudadana en la proposición de políticas públicas y elaboración de normas.
+            En esta sección se realizará los procesos de participación ciudadana en la proposición de políticas públicas y elaboración de normas. 
+            <br>
+            Los requisitos y procedimiento del proceso de participación ciudadana en la proposición de políticas públicas se determinarán reglamentariamente.
           </p>
         </div>
+        <div class="small-12 text-center">
+          <%= layout_menu_link_to t("layouts.header.proposals"),
+                                proposals_path,
+                                controller.class == ProposalsController,
+                                accesskey: "2",
+                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
+                                class: "button" %>
+          <!-- TODO: añadir botón Procesos -->
+        </div>
       </div>
-
+      <div class="row section-content">
+        <div class="small-12 column">
+          <h3 id="presupuestos" data-magellan-target="presupuestos">
+            4. Seguimiento y evaluación de las políticas públicas
+          </h3>
+          <p>
+            En este apartado se dará soporte a los procesos de  Participación ciudadana en el seguimiento y evaluación de las políticas públicas.Los mecanismos de participación directa en el seguimiento de las políticas públicas se establecerán reglamentariamente.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <!-- TODO: añadir botón Procesos -->
+        </div>
+      </div>
+      <div class="row section-content">
+        <div class="small-12 column">
+          <h3 id="consultas" data-magellan-target="consultas">
+            5. Consultas Populares
+          </h3>
+          <p>
+            En esta sección se realizarán las Consultas Participativas. Estas consultas son el instrumento de participación ciudadana que tiene por objeto el conocimiento de la opinión de un determinado sector o colectivo de la población, mediante un sistema de votación de contenido no referendario, sobre asuntos de interés público que le afecten.
+          </p>
+        </div>
+        <div class="small-12 column">
+          <h4>
+            5.1 Consultas Participativas
+          </h4>
+          <p>
+            En esta sección se realizarán las Consultas Participativas. Estas consultas son el instrumento de participación ciudadana que tiene por objeto el conocimiento de la opinión de un determinado sector o colectivo de la población, mediante un sistema de votación de contenido no referendario, sobre asuntos de interés público que le afecten.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <%= layout_menu_link_to t("layouts.header.poll_questions"),
+                                  polls_path,
+                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
+                                  accesskey: "3",
+                                  title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
+                                  class: "button" %>
+        </div>
+        <div class="small-12 column">
+          <h4>
+            5.2 Encuestas
+          </h4>
+          <p>
+            En esta sección el Ayuntamiento de Granada realizará encuestas, un procedimiento a través del cual se recoge la opinión de la ciudadanía sobre un asunto objeto de consulta, por medio de muestreos que deben estar diseñados para representar las opiniones de una población llevando a cabo una serie de preguntas y extrapolando generalidades en proporción o dentro de un intervalo de confianza.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <%= layout_menu_link_to t("layouts.header.poll_questions"),
+                                  polls_path,
+                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
+                                  accesskey: "3",
+                                  title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
+                                  class: "button" %>
+        </div>
+        <div class="small-12 column">
+          <h4>
+            5.3 Foros de participación
+          </h4>
+          <p>
+            Grupos de ciudadanos o ciudadanas o representantes de entidades de participación ciudadana elegidos democráticamente mediante la publicación de la correspondiente convocatoria, que establecerá un plazo de presentación de solicitudes para participar en el correspondiente Foro.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <%= layout_menu_link_to t("layouts.header.poll_questions"),
+                                  polls_path,
+                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
+                                  accesskey: "3",
+                                  title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
+                                  class: "button" %>
+        </div>
+        <div class="small-12 column">
+          <h4>
+            5.4 Paneles Ciudadanos
+          </h4>
+          <p>
+            En esta sección se dará soporte digital a los Paneles ciudadanos, que son grupos de personas o de representantes de entidades de participación ciudadana, seleccionados como muestra representativa de la sociedad que permiten obtener un interlocutor permanente de la ciudadanía para recabar de forma constante e inmediata información sobre cuestiones de interés para la gestión pública.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <!-- TODO: añadir botón Procesos -->
+        </div>
+        <div class="small-12 column">
+          <h4>
+            5.5 Jurados ciudadanos
+          </h4>
+          <p>
+            Son grupos creados por la Administración pública que tienen como finalidad analizar los efectos de una determinada acción, proyecto o programa llevado a cabo por la misma.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <!-- TODO: añadir botón Procesos -->
+        </div>
+        <div class="small-12 column">
+          <h4>
+            5.6 Audiencias públicas
+          </h4>
+          <p>
+            Son un instrumento de consulta en el que, mediante un procedimiento oral y público, las Administraciones públicas posibilitan a las personas, entidades, organizaciones y agentes sociales relacionados o directamente afectados por una política pública ser escuchados antes de adoptar una decisión sobre el asunto que les afecta.
+          </p>
+        </div>
+        <div class="small-12 text-center">
+          <!-- TODO: añadir botón Procesos -->
+        </div>
+      </div>
 
     </div>
     <!--div class="small-12 medium-4 large-3 column more-info-sidebar">

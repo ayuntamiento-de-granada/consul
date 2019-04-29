@@ -8,54 +8,31 @@
 
 <div class="row margin-top">
 
-<div class="small-12 medium-12 column m-50">
-  <div class="row mt-50">
-    <div class="small-12 medium-6 column">
-      <h3>Presupuestos Participativos en Granada</h3>
-      <p>
-        Los Presupuestos Participativos son una herramienta que permite que vecinos y vecinas decidan de manera directa en qué emplear una parte del presupuesto de su Ayuntamiento.
-        <br><br>
-        La ciudadanía propone proyectos que son priorizados en una fase de apoyo ciudadano, después son evaluados por el personal técnico del Ayuntamiento y, finalmente, llegan a una fase de votación final. Las propuestas más votadas por la ciudadanía pasan a formar parte del proyecto inicial del Presupuesto General del año siguiente.
-        <br><br>
-        El Ayuntamiento de Granada puso en marcha el primer proceso de Presupuestos Participativos del Concejo en 2017, y una segunda edición en 2018. En ambas ocasiones se reservaron un millón y medio de euros del presupuesto del ejercicio siguiente a las propuestas que resultaran ganadoras en el proceso participativo.
-      </p>
-    </div>
-    <div class="small-12 medium-6 column">
-      <iframe width="100%" height="321px" src="https://www.youtube.com/embed/bAC7XAhTNzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
+<div class="small-12 medium-12 column m-50"></div>
       
 <div class="call-action">
   <div class="row"> 
-    <div class="small-12 medium-12 large-4 column">
-      <a href="/conoce_el_proceso " class="call-action-block bg-image">
+   <div class="small-12 medium-12 large-4 column">
+      <a href="/proposals_law" class="call-action-block bg-image">
           <%= image_tag("banner_1.jpg") %>
-          <h3 class="col-8">Conoce el proceso</h3>
+          <h3 class="col-8">Procesos Participativos</h3>
       </a>
     </div>
     <div class="small-12 medium-12 large-4 column">
-      <a href="/edicionespasadas" target="_blank" class="call-action-block bg-image">
+      <a href="<%= proposals_path %>" class="call-action-block bg-image">
           <%= image_tag("banner_2.jpg") %>
-          <h3 class="col-8">Ediciones pasadas</h3>
+          <h3 class="col-8"><%= t("layouts.header.proposals") %></h3>
       </a>
     </div>
     <div class="small-12 medium-12 large-4 column">
-      <a href="/estado-proyectos-2018" class="call-action-block bg-image">
+      <a href="<%= debates_path %>" class="call-action-block bg-image">
           <%= image_tag("banner_3.jpg") %>
-          <h3 class="col-8">Estado proyectos</h3>
+          <h3 class="col-8"><%= t("layouts.header.debates") %></h3>
       </a>
     </div>
   </div>
 </div>
 
-<div class="small-12 medium-12 column">
-  <div class="row">
-    <div class="small-12 medium-12 column text-center">
-       <%= image_tag("subheader_1.jpg", class: "img-medium-300") %>
-    </div>
-  </div>
-</div>
 <div class="small-12 medium-12 column m-50">
   <div class="row">
     <div class="small-12 medium-12 column text-center">

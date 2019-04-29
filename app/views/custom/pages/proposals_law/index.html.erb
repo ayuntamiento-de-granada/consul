@@ -49,12 +49,12 @@
           </ul>
         </div>
         <div class="small-12 text-center">
-          <%= layout_menu_link_to t("layouts.header.debates"),
+          <% if feature?("debates") %>
+            <%= link_to t("layouts.header.debates"),
                               debates_path,
-                              controller_name == "debates",
-                              accesskey: "1",
                               title: t("shared.go_to_page") + t("layouts.header.debates"),
                               class: "button" %>
+          <% end %>
         </div>
       </div>
       <div class="row section-content">
@@ -67,12 +67,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <%= layout_menu_link_to t("layouts.header.budgets"),
+          <% if feature?("budgets") %>
+            <%= link_to t("layouts.header.budgets"),
                                   budgets_path,
-                                  controller_name == "budgets" || controller_name == "investments",
-                                  accesskey: "5",
                                   title: t("shared.go_to_page") + t("layouts.header.budgets"),
                                   class: "button" %>
+          <% end %>
         </div>
       </div>
       <div class="row section-content">
@@ -87,13 +87,18 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <%= layout_menu_link_to t("layouts.header.proposals"),
+          <% if feature?("proposals") %>
+            <%= link_to t("layouts.header.proposals"),
                                 proposals_path,
-                                controller.class == ProposalsController,
-                                accesskey: "2",
                                 title: t("shared.go_to_page") + t("layouts.header.proposals"),
                                 class: "button" %>
-          <!-- TODO: añadir botón Procesos -->
+            <% end %>
+            <% if feature?("legislation") %>
+              <%= link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
+                                class: "button" %>
+            <% end %>
         </div>
       </div>
       <div class="row section-content">
@@ -106,7 +111,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <!-- TODO: añadir botón Procesos -->
+           <% if feature?("legislation") %>
+              <%= link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
+                                class: "button" %>
+            <% end %>
         </div>
       </div>
       <div class="row section-content">
@@ -127,12 +137,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <%= layout_menu_link_to t("layouts.header.poll_questions"),
+          <% if feature?("polls") %>
+            <%= link_to t("layouts.header.poll_questions"),
                                   polls_path,
-                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
-                                  accesskey: "3",
                                   title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
                                   class: "button" %>
+          <% end %>
         </div>
         <div class="small-12 column">
           <h4>
@@ -143,12 +153,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <%= layout_menu_link_to t("layouts.header.poll_questions"),
+          <% if feature?("polls") %>
+            <%= link_to t("layouts.header.poll_questions"),
                                   polls_path,
-                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
-                                  accesskey: "3",
                                   title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
                                   class: "button" %>
+          <% end %>
         </div>
         <div class="small-12 column">
           <h4>
@@ -159,12 +169,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <%= layout_menu_link_to t("layouts.header.poll_questions"),
+          <% if feature?("polls") %>
+            <%= link_to t("layouts.header.poll_questions"),
                                   polls_path,
-                                  controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
-                                  accesskey: "3",
                                   title: t("shared.go_to_page") + t("layouts.header.poll_questions"),
                                   class: "button" %>
+          <% end %>
         </div>
         <div class="small-12 column">
           <h4>
@@ -175,7 +185,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <!-- TODO: añadir botón Procesos -->
+           <% if feature?("legislation") %>
+              <%= link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
+                                class: "button" %>
+            <% end %>
         </div>
         <div class="small-12 column">
           <h4>
@@ -186,7 +201,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <!-- TODO: añadir botón Procesos -->
+           <% if feature?("legislation") %>
+              <%= link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
+                                class: "button" %>
+            <% end %>
         </div>
         <div class="small-12 column">
           <h4>
@@ -197,7 +217,12 @@
           </p>
         </div>
         <div class="small-12 text-center">
-          <!-- TODO: añadir botón Procesos -->
+           <% if feature?("legislation") %>
+              <%= link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
+                                class: "button" %>
+            <% end %>
         </div>
       </div>
 

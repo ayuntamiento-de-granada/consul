@@ -1,10 +1,10 @@
 include DocumentParser
 class CensusApi
 
-  def call(document_type, document_number)
+  def call(document_type, document_number, postal_code)
     response = nil
     get_document_number_variants(document_type, document_number).each do |variant|
-      response = Response.new(get_response_body(document_type, variant))
+      response = Response.new(get_response_body(variant, postal_code))
       return response if response.valid?
     end
     response
@@ -16,51 +16,31 @@ class CensusApi
     end
 
     def valid?
-      data[:datos_habitante][:item].present?
-    end
-
-    def date_of_birth
-      str = data[:datos_habitante][:item][:fecha_nacimiento_string]
-      day, month, year = str.match(/(\d\d?)\D(\d\d?)\D(\d\d\d?\d?)/)[1..3]
-      return nil unless day.present? && month.present? && year.present?
-      Time.zone.local(year.to_i, month.to_i, day.to_i).to_date
-    end
-
-    def postal_code
-      data[:datos_vivienda][:item][:codigo_postal]
+      data[:Consulta_sim][:REGISTRO].present?
     end
 
     def district_code
-      data[:datos_vivienda][:item][:codigo_distrito]
-    end
-
-    def gender
-      case data[:datos_habitante][:item][:descripcion_sexo]
-      when "Varón"
-        "male"
-      when "Mujer"
-        "female"
-      end
-    end
-
-    def name
-      "#{data[:datos_habitante][:item][:nombre]} #{data[:datos_habitante][:item][:apellido1]}"
+      data[:Consulta_sim][:REGISTRO][:RESPUESTA]
     end
 
     private
 
       def data
-        @body[:get_habita_datos_response][:get_habita_datos_return]
+        if Rails.env.development?
+          @body[:ejecutar_consulta_response][:return]
+        else
+          Hash.from_xml(@body[:ejecutar_consulta_response][:return].gsub("\n", ""))
+        end
       end
   end
 
   private
 
-    def get_response_body(document_type, document_number)
+    def get_response_body(document_number, postal_code)
       if end_point_available?
-        client.call(:get_habita_datos, message: request(document_type, document_number)).body
+        client.call(:ejecutar_consulta, message: request(document_number, postal_code)).body
       else
-        stubbed_response(document_type, document_number)
+        stubbed_response(document_number, postal_code)
       end
     end
 
@@ -68,23 +48,20 @@ class CensusApi
       @client = Savon.client(wsdl: Rails.application.secrets.census_api_end_point)
     end
 
-    def request(document_type, document_number)
-      { request:
-        { codigo_institucion: Rails.application.secrets.census_api_institution_code,
-          codigo_portal:      Rails.application.secrets.census_api_portal_name,
-          codigo_usuario:     Rails.application.secrets.census_api_user_code,
-          documento:          document_number,
-          tipo_documento:     document_type,
-          codigo_idioma:      102,
-          nivel: 3 }}
+    def request(document_number, postal_code)
+      {
+        servicio: "CONSPDR3",
+        params: "P1=#{document_number}&P2=#{postal_code}",
+        packetsize: 1
+      }
     end
 
     def end_point_available?
       Rails.env.staging? || Rails.env.preproduction? || Rails.env.production?
     end
 
-    def stubbed_response(document_type, document_number)
-      if (document_number == "12345678Z" || document_number == "12345678Y") && document_type == "1"
+    def stubbed_response(document_number, postal_code)
+      if (document_number == "12345678Z" || document_number == "12345678Y")
         stubbed_valid_response
       else
         stubbed_invalid_response
@@ -93,21 +70,13 @@ class CensusApi
 
     def stubbed_valid_response
       {
-        get_habita_datos_response: {
-          get_habita_datos_return: {
-            datos_habitante: {
-              item: {
-                fecha_nacimiento_string: "31-12-1980",
-                identificador_documento: "12345678Z",
-                descripcion_sexo: "Varón",
-                nombre: "José",
-                apellido1: "García"
-              }
-            },
-            datos_vivienda: {
-              item: {
-                codigo_postal: "28013",
-                codigo_distrito: "01"
+        ejecutar_consulta_response: {
+          return: {
+            Consulta_sim: {
+              Bookmark: "",
+              Recsreaded: "1",
+              REGISTRO: {
+                RESPUESTA: "BEIRO"
               }
             }
           }
@@ -116,7 +85,17 @@ class CensusApi
     end
 
     def stubbed_invalid_response
-      {get_habita_datos_response: {get_habita_datos_return: {datos_habitante: {}, datos_vivienda: {}}}}
+      {
+        ejecutar_consulta_response: {
+          return: {
+            Consulta_sim: {
+              Bookmark: "",
+              Recsreaded: "1",
+              REGISTRO: nil
+            }
+          }
+        }
+      }
     end
 
     def dni?(document_type)

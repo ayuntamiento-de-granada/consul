@@ -16,11 +16,11 @@ class CensusApi
     end
 
     def valid?
-      data[:Consulta_sim][:REGISTRO].present?
+      data["Consulta_sim"]["REGISTRO"].present?
     end
 
     def district_code
-      data[:Consulta_sim][:REGISTRO][:RESPUESTA]
+      data["Consulta_sim"]["REGISTRO"]["RESPUESTA"]
     end
 
     private
@@ -72,11 +72,11 @@ class CensusApi
       {
         ejecutar_consulta_response: {
           return: {
-            Consulta_sim: {
-              Bookmark: "",
-              Recsreaded: "1",
-              REGISTRO: {
-                RESPUESTA: "BEIRO"
+            "Consulta_sim" => {
+              "Bookmark" => "",
+              "Recsreaded" => "1",
+              "REGISTRO" => {
+                "RESPUESTA" => "BEIRO"
               }
             }
           }
@@ -88,10 +88,10 @@ class CensusApi
       {
         ejecutar_consulta_response: {
           return: {
-            Consulta_sim: {
-              Bookmark: "",
-              Recsreaded: "1",
-              REGISTRO: nil
+            "Consulta_sim" => {
+              "Bookmark" => "",
+              "Recsreaded" => "1",
+              "REGISTRO" => nil
             }
           }
         }

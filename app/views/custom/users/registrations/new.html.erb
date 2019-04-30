@@ -1,0 +1,78 @@
+<% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
+<h2><%= t("devise_views.users.registrations.new.title") %></h2>
+
+<%= render "devise/omniauth_form" %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "shared/errors", resource: resource %>
+
+  <p>
+    <%= t("devise_views.users.registrations.new.organization_signup",
+        signup_link: link_to(t("devise_views.users.registrations.new.organization_signup_link"), new_organization_registration_path)).html_safe %>
+  </p>
+
+  <div class="row">
+    <div class="small-12 column">
+
+      <%= f.hidden_field :use_redeemable_code %>
+      <%= f.hidden_field :locale, value: I18n.locale %>
+
+      <%= f.label :username %>
+      <p class="help-text" id="username-help-text"><%= t("devise_views.users.registrations.new.username_note") %></p>
+      <%= f.text_field :username,  autofocus: true, maxlength: User.username_max_length,
+                                   placeholder: t("devise_views.users.registrations.new.username_label"),
+                                   label: false,
+                                   aria: {describedby: "username-help-text"} %>
+
+      <%= f.invisible_captcha :address %>
+
+      <%= f.email_field :email,     placeholder: t("devise_views.users.registrations.new.email_label") %>
+
+
+      <%= f.password_field :password, autocomplete: "off",
+                           placeholder: t("devise_views.users.registrations.new.password_label") %>
+
+      <%= f.password_field :password_confirmation, autocomplete: "off",
+                           label: t("devise_views.users.registrations.new.password_confirmation_label"),
+                           placeholder: t("devise_views.users.registrations.new.password_confirmation_label") %>
+
+      <% if resource.use_redeemable_code %>
+        <%= f.text_field :redeemable_code, placeholder: t("devise_views.users.registrations.new.redeemable_code") %>
+      <% end %>
+
+      <%= f.label :terms_of_service do %>
+        <%= f.check_box :terms_of_service, title: t("devise_views.users.registrations.new.terms_title"), label: false %>
+        <span class="checkbox">
+          <%= t("devise_views.users.registrations.new.terms",
+              terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/conditions",
+              title: t("shared.target_blank_html"),
+              target: "_blank")).html_safe %>
+        </span>
+      <% end %>
+      
+      <p>AVISO DE PROTECCIÓN DE DATOS – DEBER DE INFORMACIÓN</p>
+      <p>
+        Según establece en la vigente normativa de protección de datos se le informa que los datos recabados a través del presente formulario serán tratados como responsable del tratamiento por el Ayuntamiento de Granada con la finalidad de tramitar y gestionar el acceso a su cuenta de habilitación en procesos de participación ciudadana.
+      </p>
+      <p>
+        La licitud del tratamiento está basada en el artículo 6.1.e) del RGPD: el tratamiento es necesario para el cumplimiento de una misión realizada en interés público o en el ejercicio de poderes públicos conferidos al responsable del tratamiento: Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. No están previstas comunicaciones de datos a terceros salvo obligación legal, ni están previstas transferencias a terceros países u organizaciones internacionales.
+      </p>
+      <p>
+        Los datos serán conservados mientras se desarrolle el proceso participativo del Ayuntamiento de Granada y siempre que no se solicite su supresión, siendo de aplicación lo dispuesto en la normativa de archivos y documentación.
+      </p>
+      <p>
+        Podrá ejercitar los derechos de acceso, rectificación, supresión y portabilidad de los datos, de limitación y oposición a su tratamiento, así como a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos, cuando procedan, ante el Ayuntamiento de Granada, Avda. de las Fuerzas Armadas, nº 4. Complejo Administrativo “Los Mondragones”. Concejalía Delegada de Participación Ciudadana, Juventud y Deportes , Edificio E, Planta 1ª 18071-Granada o en la dirección de correo electrónico dpd@granada.org.
+      </p>
+      <p>
+        Así mismo, usted podrá en todo momento presentar queja o reclamación para el ejercicio de sus derechos ante la Agencia Española de Protección de Datos (AEPD).
+      </p>
+
+
+      <div class="small-12 medium-6 small-centered">
+        <%= f.submit t("devise_views.users.registrations.new.submit"), class: "button expanded" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

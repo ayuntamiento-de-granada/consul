@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <!--div class="row">
     <div class="small-12 column">
       <ul class="menu-pages" data-magellan>
         <li>
@@ -26,7 +26,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div-->
 
 </div>
 
@@ -36,8 +36,8 @@
       
       <div class="row section-content">
         <div class="small-12 column">
-          <h3 id="deliberacion" data-magellan-target="deliberacion">
-            1. Deliberación Participativa
+          <h3 id="deliberaciones" data-magellan-target="deliberaciones">
+            1. Deliberaciones
           </h3>
           <p>
             En esta sección se realizarán los procesos de Deliberación Participativa, estos son procesos de contraste de argumentos y motivaciones expuestos en un debate público integrado en un procedimiento de decisión o de formulación o adopción de una política pública en el que se abre un espacio por parte de los órganos competentes de la Administración pública andaluza para conocer los intereses, posiciones y propuestas de la ciudadanía y en los siguientes supuestos:
@@ -62,7 +62,7 @@
       </div>
       <div class="row section-content">
         <div class="small-12 column">
-          <h3 id="presupuestos" data-magellan-target="presupuestos">
+          <h3 id="presupuestos_participativos" data-magellan-target="presupuestos_participativos">
             2. Presupuestos Participativos
           </h3>
           <p>
@@ -80,8 +80,8 @@
       </div>
       <div class="row section-content">
         <div class="small-12 column">
-          <h3 id="proposicion" data-magellan-target="presupuestos">
-            3. Proposición de políticas públicas
+          <h3 id="iniciativas_ciudadanas" data-magellan-target="iniciativas_ciudadanas">
+            3. Iniciativas Ciudadanas
           </h3>
           <p>
             En esta sección se realizará los procesos de participación ciudadana en la proposición de políticas públicas y elaboración de normas. 
@@ -106,26 +106,8 @@
       </div>
       <div class="row section-content">
         <div class="small-12 column">
-          <h3 id="politicas_publicas" data-magellan-target="presupuestos">
-            4. Seguimiento y evaluación de las políticas públicas
-          </h3>
-          <p>
-            En este apartado se dará soporte a los procesos de  Participación ciudadana en el seguimiento y evaluación de las políticas públicas.Los mecanismos de participación directa en el seguimiento de las políticas públicas se establecerán reglamentariamente.
-          </p>
-        </div>
-        <div class="small-12 text-center">
-           <% if feature?("legislation") %>
-              <%= link_to t("layouts.header.collaborative_legislation"),
-                                legislation_processes_path,
-                                title: t("shared.go_to_page") + t("layouts.header.proposals"),
-                                class: "button" %>
-            <% end %>
-        </div>
-      </div>
-      <div class="row section-content">
-        <div class="small-12 column">
-          <h3 id="consultas" data-magellan-target="consultas">
-            5. Consultas Populares
+          <h3 id="consultas_populares" data-magellan-target="consultas_populares">
+            4. Consultas Populares
           </h3>
           <p>
             En esta sección se realizarán las Consultas Participativas. Estas consultas son el instrumento de participación ciudadana que tiene por objeto el conocimiento de la opinión de un determinado sector o colectivo de la población, mediante un sistema de votación de contenido no referendario, sobre asuntos de interés público que le afecten.
@@ -133,7 +115,7 @@
         </div>
         <div class="small-12 column">
           <h4>
-            5.1 Consultas Participativas
+            4.1 Consultas Participativas
           </h4>
           <p>
             En esta sección se realizarán las Consultas Participativas. Estas consultas son el instrumento de participación ciudadana que tiene por objeto el conocimiento de la opinión de un determinado sector o colectivo de la población, mediante un sistema de votación de contenido no referendario, sobre asuntos de interés público que le afecten.
@@ -149,7 +131,7 @@
         </div>
         <div class="small-12 column">
           <h4>
-            5.2 Encuestas
+            4.2 Encuestas
           </h4>
           <p>
             En esta sección el Ayuntamiento de Granada realizará encuestas, un procedimiento a través del cual se recoge la opinión de la ciudadanía sobre un asunto objeto de consulta, por medio de muestreos que deben estar diseñados para representar las opiniones de una población llevando a cabo una serie de preguntas y extrapolando generalidades en proporción o dentro de un intervalo de confianza.
@@ -165,7 +147,7 @@
         </div>
         <div class="small-12 column">
           <h4>
-            5.3 Foros de participación
+            4.3 Foros de participación
           </h4>
           <p>
             Grupos de ciudadanos o ciudadanas o representantes de entidades de participación ciudadana elegidos democráticamente mediante la publicación de la correspondiente convocatoria, que establecerá un plazo de presentación de solicitudes para participar en el correspondiente Foro.
@@ -181,7 +163,7 @@
         </div>
         <div class="small-12 column">
           <h4>
-            5.4 Paneles Ciudadanos
+            4.4 Paneles Ciudadanos
           </h4>
           <p>
             En esta sección se dará soporte digital a los Paneles ciudadanos, que son grupos de personas o de representantes de entidades de participación ciudadana, seleccionados como muestra representativa de la sociedad que permiten obtener un interlocutor permanente de la ciudadanía para recabar de forma constante e inmediata información sobre cuestiones de interés para la gestión pública.
@@ -197,7 +179,7 @@
         </div>
         <div class="small-12 column">
           <h4>
-            5.5 Jurados ciudadanos
+            4.5 Jurados ciudadanos
           </h4>
           <p>
             Son grupos creados por la Administración pública que tienen como finalidad analizar los efectos de una determinada acción, proyecto o programa llevado a cabo por la misma.
@@ -213,7 +195,7 @@
         </div>
         <div class="small-12 column">
           <h4>
-            5.6 Audiencias públicas
+            4.6 Audiencias públicas
           </h4>
           <p>
             Son un instrumento de consulta en el que, mediante un procedimiento oral y público, las Administraciones públicas posibilitan a las personas, entidades, organizaciones y agentes sociales relacionados o directamente afectados por una política pública ser escuchados antes de adoptar una decisión sobre el asunto que les afecta.

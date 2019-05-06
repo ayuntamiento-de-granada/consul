@@ -55,42 +55,32 @@
       </li>
     <% end %>
       <li>
-        <%= layout_menu_link_to "Procesos participativos",
-                                proposals_law_path,
-                                current_page?(proposals_law_path),
-                                title: t("shared.go_to_page") + "Procesos Participativos" %>
-      </li>
-      <li>
-        <%= layout_menu_link_to "Deliberación Participativa",
-                                proposals_law_path + "#deliberacion",
+        <%= layout_menu_link_to "Deliberaciones",
+                                proposals_law_path + "#deliberaciones",
                                 current_page?(""),
                                 title: t("shared.go_to_page") + "Deliberación Participativa" %>
       </li>
       <li>
-        <%= layout_menu_link_to "Presupuestos Participativos",
-                                proposals_law_path + "#presupuestos",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Presupuestos Participativos" %>
-      </li>
-      <li>
-        <%= layout_menu_link_to "Proposición de políticas públicas",
-                                proposals_law_path + "#proposicion",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Proposición de políticas públicas" %>
-      </li>
-      <li>
-        <%= layout_menu_link_to "Seguimiento y evaluación de las políticas públicas",
-                                proposals_law_path + "#politicas_publicas",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Seguimiento y evaluación de las políticas públicas" %>
-      </li>
-      <li>
         <%= layout_menu_link_to "Consultas Populares",
-                                proposals_law_path + "#politicas_publicas",
+                                proposals_law_path + "#consultas_populares",
                                 current_page?(""),
                                 title: t("shared.go_to_page") + "Consultas Populares" %>
       </li>
+      <li>
+        <%= layout_menu_link_to "Iniciativas Ciudadanas",
+                                proposals_law_path + "#iniciativas_ciudadanas",
+                                current_page?(""),
+                                title: t("shared.go_to_page") + "Iniciativas ciudadanas" %>
+      </li>
+      <li>
+        <%= layout_menu_link_to "Presupuestos Participativos",
+                                proposals_law_path + "#presupuestos_participativos",
+                                current_page?(""),
+                                title: t("shared.go_to_page") + "Presupuestos Participativos" %>
+      </li>
+     
       
+
     <% if feature?(:help_page) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.help"),

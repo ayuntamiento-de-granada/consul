@@ -55,11 +55,10 @@
       </li>
     <% end %>
       <li>
-        <span class="icon-help icon-subnavigation" aria-hidden="true"></span>
-        <%= layout_menu_link_to "Información de los Procesos",
-                                proposals_law_path,
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Información de los Procesos" %>
+        <a href="/propoals_law"> 
+          <span class="icon-help icon-subnavigation" aria-hidden="true"></span>
+          Información de los Procesos
+        </a>
       </li>
       <!--li>
         <%= layout_menu_link_to "Deliberaciones",

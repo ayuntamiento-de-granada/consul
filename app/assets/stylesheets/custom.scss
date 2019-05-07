@@ -16,6 +16,7 @@
 /*  05. Welcome / Call action
 /*  06. Images
 /*  07. Auth page
+/*  08. Budgets page
 /*
 /*************************************************/
 
@@ -571,6 +572,15 @@ position: relative;
   height: auto;
   object-fit: cover;
 }
+.icon-subnavigation {
+  display: inline-block;
+  top: 4px;
+  position: relative
+}
+.icon-subnavigation ~ a {
+  display: inline-block;
+  width: initial;
+}
 
 
 /*************************************************/
@@ -578,4 +588,35 @@ position: relative;
 /*************************************************/
 .auth-image h1 {
   /*background: rgba(255,255,255,0.33);*/
+}
+
+
+/*************************************************/
+/* 08. Budgets page */
+/*************************************************/
+.expanded.budget {
+  background: $footer-border;
+}
+.expanded.budget .info {
+  background: $footer-border-dark;
+}
+.expanded.budget .button {
+  color: $footer-border;
+}
+.budget-timeline {
+  border-left: 3px solid $footer-border;
+  
+  .phase.is-active {
+
+    &::before {
+      background-color: $footer-border;
+    }
+
+    h3 {
+      background: $footer-border;
+    }
+  }
+  .phase::before {
+    border: 4px solid $footer-border;
+  }
 }

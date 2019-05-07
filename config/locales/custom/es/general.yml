@@ -126,10 +126,10 @@ es:
         other: " que contienen <strong>'%{search_term}'</strong>"
       select_order: Ordenar por
       start_debate: Empieza un debate
-      title: Debates
+      title: Deliberaciones
       section_header:
         icon_alt: Icono de Debates
-        title: Debates
+        title: Deliberaciones
         help: Ayuda sobre los debates
       section_footer:
         title: Ayuda sobre los debates
@@ -210,8 +210,8 @@ es:
       description: Este portal usa la %{consul} que es %{open_source}.
       open_source: software de código abierto
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
-      participation_text: Decide cómo debe ser la ciudad que quieres.
-      participation_title: Participación
+      participation_text: Participa, debate y decide la Granada que quieres.
+      participation_title: Participación Ciudadana
       privacy: Política de privacidad
     header:
       administration_menu: Admin
@@ -229,8 +229,8 @@ es:
       my_account_link: Mi cuenta
       my_activity_link: Mi actividad
       open: abierto
-      open_gov: Gobierno %{open}
-      proposals: "Iniciativas Ciudadanas"
+      open_gov: Ayuntamiento de Granada
+      proposals: "Propuestas Ciudadanas"
       poll_questions: "Consultas Populares"
       budgets: Presupuestos participativos
       spending_proposals: Propuestas de inversión
@@ -465,7 +465,7 @@ es:
       cant_answer: "Esta votación no está disponible en tu zona"
       section_header:
         icon_alt: Icono de Votaciones
-        title: Votaciones
+        title: Consultas polulares
         help: Ayuda sobre las votaciones
       section_footer:
         title: Ayuda sobre las votaciones
@@ -676,7 +676,7 @@ es:
   stats:
     index:
       visits: Visitas
-      debates: Debates
+      debates: Deliberaciones
       proposals: Propuestas ciudadanas
       comments: Comentarios
       proposal_votes: Votos en propuestas
@@ -710,7 +710,7 @@ es:
       deleted_proposal: Esta propuesta ha sido eliminada
       deleted_budget_investment: Este proyecto de gasto ha sido eliminado
       proposals: Propuestas
-      debates: Debates
+      debates: Deliberaciones
       budget_investments: Proyectos de presupuestos participativos
       comments: Comentarios
       actions: Acciones

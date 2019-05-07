@@ -101,6 +101,21 @@ header {
   }
 }
 
+.title-header {
+  text-align: center;
+  font-size: 25px;
+}
+@include breakpoint(medium only) {
+  .title-header {
+    font-size: 17px;
+  }
+}
+@include breakpoint(small only) {
+  .title-header {
+    font-size: 13px;
+  }
+}
+
 /*************************************************/
 /* 03. Navbar */
 /*************************************************/

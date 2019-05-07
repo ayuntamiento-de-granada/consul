@@ -55,6 +55,12 @@
       </li>
     <% end %>
       <li>
+        <%= layout_menu_link_to "Información de los Procesos",
+                                proposals_law_path,
+                                current_page?(""),
+                                title: t("shared.go_to_page") + "Información de los Procesos" %>
+      </li>
+      <!--li>
         <%= layout_menu_link_to "Deliberaciones",
                                 proposals_law_path + "#deliberaciones",
                                 current_page?(""),
@@ -77,7 +83,7 @@
                                 proposals_law_path + "#presupuestos_participativos",
                                 current_page?(""),
                                 title: t("shared.go_to_page") + "Presupuestos Participativos" %>
-      </li>
+      </li-->
      
       
 

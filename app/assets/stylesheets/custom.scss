@@ -104,22 +104,40 @@ header {
 
 .title-header {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.title-header h1 {
+  margin: 0px;
 }
 @include breakpoint(medium only) {
   .title-header {
-    font-size: 17px;
+    font-size: 15px;
   }
+  .title-header h1,.title-header .h1 {
+    font-size: 2rem;
+}
 }
 @include breakpoint(small only) {
   .title-header {
-    font-size: 13px;
+    font-size: 10px;
   }
+
+ .title-header h1,.title-header .h1 {
+    font-size: 1.5rem;
 }
+
+}
+
 
 /*************************************************/
 /* 03. Navbar */
 /*************************************************/
+
+.info-link a {
+   color: #8a8a8a !important;
+}
+
 .menu-icon.dark::after {
   background: $brand;
   -webkit-box-shadow: 0 7px 0 $brand, 0 14px 0 $brand;
@@ -574,7 +592,7 @@ position: relative;
 }
 .icon-subnavigation {
   display: inline-block;
-  top: 4px;
+  top: 3px;
   position: relative
 }
 .icon-subnavigation ~ a {
@@ -620,3 +638,4 @@ position: relative;
     border: 4px solid $footer-border;
   }
 }
+

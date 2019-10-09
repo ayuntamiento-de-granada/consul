@@ -427,6 +427,12 @@ position: relative;
   bottom: 0px;
   width: 100%;
 
+  .social-icons {
+    a > span {
+      font-size: 35px;
+    }
+  }
+
   @include breakpoint(small only) {
     position: relative;
 
@@ -572,6 +578,14 @@ position: relative;
         background: $brand;
       }
     }
+  }
+  .call-action-video iframe {
+    height: 250px;
+    margin: 20px 0px;
+  }
+  .call-action-main-title {
+    font-size: 30px;
+    color: $brand;
   }
 }
 

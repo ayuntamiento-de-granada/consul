@@ -18,7 +18,16 @@
         <%= link_to t("layouts.footer.participation_title"), root_path, class: "title" %>
         <p><%= t("layouts.footer.participation_text") %></p>
       </div>
+
+      <div class="small-12 medium-4 column">
+        <%= link_to t("layouts.footer.transparency"), root_path, class: "title" %>
+      </div>
+
+      <div class="small-12 medium-4 column">
+        <%= link_to t("layouts.footer.participation"), root_path, class: "title" %>
+      </div>
     </div>
+    
   </div>
 
   <div class="subfooter row">
@@ -33,7 +42,7 @@
       </div>
 
       <div class="small-12 medium-4 column social">
-        <div class="text-right">
+        <div class="text-right social-icons">
           <ul>
             <% if setting["twitter_handle"] %>
               <li class="inline-block">

@@ -213,6 +213,8 @@ es:
       participation_text: Participa, debate y decide la Granada que quieres.
       participation_title: Granada Decide
       privacy: Política de privacidad
+      transparency: Transparencia
+      participation: Participación
     header:
       administration_menu: Admin
       administration: Administración
@@ -240,6 +242,7 @@ es:
           other: Tienes %{count} notificaciones nuevas
         notifications: Notificaciones
         no_notifications: "No tienes notificaciones nuevas"
+      participatory_agenda: "Agenda participativa"
     admin:
       watch_form_message: "Has realizado cambios que no han sido guardados. ¿Seguro que quieres abandonar la página?"
   notifications:

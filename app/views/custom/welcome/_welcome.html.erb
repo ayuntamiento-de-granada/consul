@@ -8,28 +8,22 @@
 
 <div class="row margin-top">
 
-<div class="small-12 medium-12 column m-50"></div>
+<div class="small-12 medium-12 column"></div>
       
 <div class="call-action">
   <div class="row"> 
-   <!--
-   <div class="small-12 medium-12 large-4 column">
-      <a href="/proposals_law" class="call-action-block bg-image">
-          <%= image_tag("banner_1.jpg") %>
-          <h3 class="col-8">Procesos Participativos</h3>
-      </a>
-    </div>
-  -->
-    <div class="small-12 medium-12 large-6 column">
-      <a href="<%= proposals_path %>" class="call-action-block bg-image">
-          <%= image_tag("banner_2.jpg") %>
-          <h3 class="col-8"><%= t("layouts.header.proposals") %></h3>
-      </a>
+    <div class="small-12 medium-12 large-12 column">
+      <span class="call-action-main-title">¿Cómo participar?</span>
     </div>
     <div class="small-12 medium-12 large-6 column">
-      <a href="<%= debates_path %>" class="call-action-block bg-image">
+      <div class="call-action-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SS0av44hZXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="small-12 medium-12 large-6 column">
+      <a href="#" class="call-action-block bg-image">
           <%= image_tag("banner_3.jpg") %>
-          <h3 class="col-8"><%= t("layouts.header.debates") %></h3>
+          <h3 class="col-8"><%= t("layouts.header.participatory_agenda") %></h3>
       </a>
     </div>
   </div>

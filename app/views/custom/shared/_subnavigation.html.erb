@@ -2,6 +2,55 @@
   <ul>
     <%= raw content_block("subnavigation_left", I18n.locale) %>
 
+    <li>
+      <%= layout_menu_link_to "Inicio",
+                                root_path,
+                                current_page?(""),
+                                title: "Ir a Inicio" %>
+    </li>
+    <li>
+      <%= layout_menu_link_to "Iniciativas Ciudadanas",
+                              proposals_path,
+                              current_page?(""),
+                              title: "Ir a Iniciativas ciudadanas" %>
+    </li>
+    <li class="parent">
+      <%= layout_menu_link_to "Procesos participativos",
+                              "#",
+                              current_page?(""),
+                              title: "Ir a Procesos participativos" %>
+      <!-- Submenú -->
+      <ul>
+        <li>
+          <%= layout_menu_link_to "Votaciones populares",
+                                  polls_path,
+                                  current_page?(""),
+                                  title: "Ir a Votaciones populares" %>
+        </li>
+        <li>
+          <%= layout_menu_link_to "Presupuestos participativos",
+                                  budgets_path,
+                                  current_page?(""),
+                                  title: "Ir a Presupuestos participativos" %>
+        </li>
+        <li>
+          <%= layout_menu_link_to "Debates públicos",
+                                  legislation_processes_path,
+                                  current_page?(""),
+                                  title: "Ir a Debates públicos" %>
+        </li>
+      </ul>
+      <!-- End Submenú -->
+    </li>
+    <li>
+      <%= layout_menu_link_to "Órganos de participación",
+                              "/organos_de_participacion",
+                              current_page?(""),
+                              title: "Ir a Órganos de participación" %>
+    </li>
+
+
+    <!--
     <% if feature?(:debates) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.debates"),
@@ -60,31 +109,7 @@
           Información de los Procesos
         </a>
       </li>
-      <!--li>
-        <%= layout_menu_link_to "Deliberaciones",
-                                proposals_law_path + "#deliberaciones",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Deliberación Participativa" %>
-      </li>
-      <li>
-        <%= layout_menu_link_to "Consultas Populares",
-                                proposals_law_path + "#consultas_populares",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Consultas Populares" %>
-      </li>
-      <li>
-        <%= layout_menu_link_to "Iniciativas Ciudadanas",
-                                proposals_law_path + "#iniciativas_ciudadanas",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Iniciativas ciudadanas" %>
-      </li>
-      <li>
-        <%= layout_menu_link_to "Presupuestos Participativos",
-                                proposals_law_path + "#presupuestos_participativos",
-                                current_page?(""),
-                                title: t("shared.go_to_page") + "Presupuestos Participativos" %>
-      </li-->
-     
+     -->
       
 
     <% if feature?(:help_page) %>
@@ -100,3 +125,13 @@
     <%= raw content_block("subnavigation_right", I18n.locale) %>
   </ul>
 </div>
+<script>
+  $(".subnavigation ul li.parent").on("click", function(event){
+    event.preventDefault();
+    if( $( this ).hasClass("is-active") ){
+      $( this ).removeClass("is-active");
+    }else{
+      $( this ).addClass("is-active");
+    }
+  });
+</script>

@@ -18,12 +18,16 @@
       </span>
 
       <div class="top-bar-title">
-        <%= link_to root_path, accesskey: "0" do %>
+        <%= link_to "https://www.granada.org/", target: "blank", accesskey: "0" do %>
           <%= image_tag(image_path_for("logo_header.png"), class: "float-left", alt: t("layouts.header.logo")) %>
         <% end %>
       </div>
 
-      <span class="title-header"><h1>Granada Decide</h1>Portal de Participación Ciudadana</span>
+      <span class="title-header">
+        <%= link_to root_path, accesskey: "0" do %>
+          <%= image_tag(image_path_for("granada_decide_logo.jpg"), class: "float-left", alt: t("layouts.header.logo")) %>
+        <% end %>
+      </span>
 
       <div id="responsive-menu">
         <div class="top-bar-right">

@@ -6,37 +6,42 @@
       <%= layout_menu_link_to "Inicio",
                                 root_path,
                                 current_page?(""),
+                                accesskey: "0",
                                 title: "Ir a Inicio" %>
     </li>
     <li>
       <%= layout_menu_link_to "Iniciativas Ciudadanas",
                               proposals_path,
                               current_page?(""),
+                              accesskey: "1",
                               title: "Ir a Iniciativas ciudadanas" %>
     </li>
     <li class="parent">
       <%= layout_menu_link_to "Procesos participativos",
                               "#",
                               current_page?(""),
-                              title: "Ir a Procesos participativos" %>
+                              title: "" %>
       <!-- Submenú -->
       <ul>
         <li>
           <%= layout_menu_link_to "Votaciones populares",
                                   polls_path,
                                   current_page?(""),
+                                  accesskey: "2",
                                   title: "Ir a Votaciones populares" %>
         </li>
         <li>
           <%= layout_menu_link_to "Presupuestos participativos",
                                   budgets_path,
                                   current_page?(""),
+                                  accesskey: "3",
                                   title: "Ir a Presupuestos participativos" %>
         </li>
         <li>
           <%= layout_menu_link_to "Debates públicos",
                                   legislation_processes_path,
                                   current_page?(""),
+                                  accesskey: "4",
                                   title: "Ir a Debates públicos" %>
         </li>
       </ul>
@@ -46,6 +51,7 @@
       <%= layout_menu_link_to "Órganos de participación",
                               "/organos_de_participacion",
                               current_page?(""),
+                              accesskey: "5",
                               title: "Ir a Órganos de participación" %>
     </li>
 

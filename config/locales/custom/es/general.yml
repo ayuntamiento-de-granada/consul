@@ -215,11 +215,13 @@ es:
       privacy: Política de privacidad
       transparency: Transparencia
       participation: Participación
+      town_hall_text: Ayuntamiento de Granada. Participación ciudadana.
+      transparency_text: Obtén información sobre el ayuntamiento de Granada.
     header:
       administration_menu: Admin
       administration: Administración
       available_locales: Idiomas disponibles
-      collaborative_legislation: Legislación colaborativa
+      collaborative_legislation: Debates Públicos
       debates: Deliberaciones
       locale: "Idioma:"
       logo: Logo de CONSUL
@@ -378,11 +380,11 @@ es:
       top_link_proposals: Propuestas más apoyadas por categoría
       section_header:
         icon_alt: Icono de Propuestas
-        title: Propuestas
-        help: Ayuda sobre las propuestas
+        title: Iniciativas Ciudadanas
+        help: Ayuda sobre las Iniciativas Ciudadanas
       section_footer:
-        title: Ayuda sobre las propuestas
-        description: Las propuestas ciudadanas son una oportunidad para que los vecinos y colectivos decidan directamente cómo quieren que sea su ciudad, después de conseguir los apoyos suficientes y de someterse a votación ciudadana.
+        title: Ayuda sobre las Iniciativas Ciudadanas
+        description: Una Iniciativa Ciudadana es una forma de participación ciudadana dirigida a promover una determinada actuación de interés público local y de competencia municipal por parte del Ayuntamiento.<br><br>Las Iniciativas Ciudadanas impulsan la participación de los ciudadanos en los asuntos públicos.<br><br>La recogida del número de apoyos de una Iniciativa Ciudadana acredita el interés público de la ciudadanía.
     new:
       form:
         submit_button: Crear propuesta
@@ -468,11 +470,11 @@ es:
       cant_answer: "Esta votación no está disponible en tu zona"
       section_header:
         icon_alt: Icono de Votaciones
-        title: Consultas polulares
-        help: Ayuda sobre las votaciones
+        title: Votaciones Populares
+        help: Ayuda sobre las Votaciones Populares
       section_footer:
-        title: Ayuda sobre las votaciones
-        description: Las votaciones ciudadanas son un mecanismo de participación por el que la ciudadanía con derecho a voto puede tomar decisiones de forma directa.
+        title: Ayuda sobre las Votaciones Populares
+        description: La votación popular como proceso de participación que constituye se articula mediante un sistema de votación adaptado al sector o colectivo de la población que tenga interés directo en el tema objeto de la votación y en el que el voto es igual, libre, directo y secreto.
       no_polls: "No hay votaciones abiertas."
     show:
       already_voted_in_booth: "Ya has participado en esta votación en urnas presenciales, no puedes volver a participar."
@@ -775,10 +777,10 @@ es:
       most_active:
         debates: "Debates más activos"
         proposals: "Iniciativas más activas"
-        processes: "Procesos abiertos"
+        processes: "Debates Públicos abiertos"
       see_all_debates: Ver todos los debates
-      see_all_proposals: Ver todas las propuestas
-      see_all_processes: Ver todos los procesos
+      see_all_proposals: Ver todas las Iniciativas Ciudadanas
+      see_all_processes: Ver todos los Debates Públicos
       process_label: Proceso
       see_process: Ver proceso
     cards:

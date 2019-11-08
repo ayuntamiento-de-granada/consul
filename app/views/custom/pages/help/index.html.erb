@@ -1,0 +1,79 @@
+<% provide :title do %><%= t("pages.titles.help", org: setting["org_name"]) %><% end %>
+<% content_for :canonical do %>
+  <%= render "shared/canonical", href: help_url %>
+<% end %>
+
+<% if has_banners? %>
+  <%= render "shared/banner" %>
+<% end %>
+
+<div class="jumbo light">
+  <div class="row">
+    <div class="small-12 medium-9 column">
+      <h2><%= t("pages.help.title", org: "Granada Decide") %></h2>
+      <p><%= t("pages.help.guide", org: "Granada Decide") %></p>
+    </div>
+  </div>
+
+  <%= render "pages/help/menu" %>
+</div>
+
+<div id="more-info" class="more-info-content">
+  <div class="row">
+    <div class="small-12 medium-7 large-8 column">
+      <div class="mb-30">
+        <p class="text-italic">
+          Los procedimientos, iniciativas (propuestas) y procesos participativos que se incluyen en este sitio se rigen a la Ley de Participación Ciudadana de Andalucía 7/2017 DE 27 DE DICIEMBRE.
+        </p>
+        <p>
+          - Las <b>Iniciativas Ciudadanas</b> son formas de <span class="text-underline"><b>participación ciudadana</b></span> dirigidas a promover una determinada actuación de interés público local y de competencia municipal por parte del Ayuntamiento de Granada.
+        </p>
+
+        <h4>
+          Procesos Participativos:
+        </h4>
+        <p>
+          - Las <b>Votaciones Populares</b> son instrumentos de participación ciudadana que realiza el Ayuntamiento con el objetivo de <b>conocer la opinión de un determinado sector o colectivo de la población</b> en materias de su compentencia, mediante un sistema de votación de contenido no referenciado, sobre asuntos de interés público que le afecten. 
+        </p>
+        <p>
+          - <b>Presupuestos Participativos</b>: se establecen para procesos de participación ciudadana con el objetivo de que la <b>ciudadanía</b> pueda <b>determinar y decidir</b> el fin y la utilización de parte de los recursos públicos que se materializará en actuaciones e inversiones del Ayuntamiento en el municipio y sus barrios.
+        </p>
+        <p>
+          - <b>Debates Públicos</b>: son actos delimitados en el tiempo y dirigidos a la escucha activa por parte de la entidad local con el fin de promover la deliberación y el contraste de argumentos entre la ciudadanía o entre esta y los responsables municipales que determinan actuaciones municipales.
+        </p>
+      </div> 
+
+      <%= render "pages/help/register" %>
+
+      <% if feature?(:proposals) %>
+        <%= render "pages/help/proposals" %>
+      <% end %>
+
+      <% if feature?(:polls) %>
+        <%= render "pages/help/polls" %>
+      <% end %>
+
+      <% if feature?(:budgets) %>
+        <%= render "pages/help/budgets" %>
+      <% end %>
+
+      <% if feature?(:debates) %>
+        <%= render "pages/help/debates" %>
+      <% end %>
+
+      <% if feature?(:legislation) %>
+        <%= render "pages/help/processes" %>
+      <% end %>
+    </div>
+    <div class="small-12 medium-4 large-3 column more-info-sidebar">
+      <%= render "pages/help/sidebar" %>
+    </div>
+  </div>
+
+  <!--div class="row">
+    <hr>
+    <div class="small-12 column">
+      <%= render "pages/help/other" %>
+    </div>
+  </div-->
+</div>

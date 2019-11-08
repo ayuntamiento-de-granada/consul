@@ -2,7 +2,7 @@
   <div class="row">
     <div class="small-12 large-4 column">
       <h1 class="logo">
-        <%= link_to t("layouts.header.open_gov", open: "#{t("layouts.header.open")}").html_safe %>
+        <%= link_to t("layouts.header.open_gov"), "https://www.granada.org/", target: "blank" %>
       </h1>
 
       <p class="info">
@@ -20,11 +20,13 @@
       </div>
 
       <div class="small-12 medium-4 column">
-        <%= link_to t("layouts.footer.transparency"), root_path, class: "title" %>
+        <%= link_to t("layouts.footer.transparency"), "https://transparencia.granada.org/", class: "title", target: "blank" %>
+        <p><%= t("layouts.footer.transparency_text") %></p>
       </div>
 
       <div class="small-12 medium-4 column">
-        <%= link_to t("layouts.footer.participation"), root_path, class: "title" %>
+        <%= link_to t("layouts.footer.participation"), "https://www.granada.org/inet/wparciu.nsf", class: "title", target: "blank" %>
+        <p><%= t("layouts.footer.town_hall_text") %></p>
       </div>
     </div>
     
@@ -35,9 +37,9 @@
       <div class="small-12 medium-8 column">
         <%= t("layouts.footer.copyright", year: Time.current.year) %>&nbsp;|
         <ul class="no-bullet inline-block">
-          <li class="inline-block"><%= link_to t("layouts.footer.privacy"), page_path("privacy") %>&nbsp;|</li>
-          <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("conditions") %>&nbsp;|</li>
-          <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("accessibility") %></li>
+          <li class="inline-block"><%= link_to t("layouts.footer.privacy"), page_path("privacy"), target: "blank" %>&nbsp;|</li>
+          <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("conditions"), target: "blank" %>&nbsp;|</li>
+          <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("accessibility"), target: "blank" %></li>
         </ul>
       </div>
 

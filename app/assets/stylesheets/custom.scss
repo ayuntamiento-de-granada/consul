@@ -45,12 +45,29 @@ a:focus {
     margin-right: 0px;
   }
 }
+.text-italic {
+  font-style: italic;
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+.d-block {
+  display: block;
+}
+img.d-block {
+  text-align: center;
+  margin: 0 auto;
+}
 
 /*************************************************/
 /* 01. Margins */
 /*************************************************/
 .mt-50 {
   margin-top: 50px;
+}
+.mb-30 {
+  margin-bottom: 30px;
 }
 .m-50 {
   margin-top: 50px;
@@ -124,7 +141,7 @@ header {
   .title-top-header {
     width: 100%;
     position: absolute;
-    bottom: 50px;
+    bottom: 90px;
     right: 0px;
   }
 }
@@ -241,6 +258,7 @@ header {
       display: none;
     }
     li.parent.is-active:after {
+      @include breakpoint(small only) {
         position: absolute;
         top: 20px;
         right: 30px;
@@ -249,6 +267,7 @@ header {
         border-right: 6px solid transparent;
         content: "";
         display: block;
+      }
     }
 
     li > ul {
@@ -272,6 +291,7 @@ header {
         display: block;
         background: $brand;
         border-top: 1px solid #fff;
+        white-space: nowrap;
         a {
           text-align: left;
         }
@@ -517,6 +537,7 @@ footer {
   .title {
       font-weight: bold;
       text-decoration: none;
+      border-bottom: 2px solid $footer-border;
   }
 }
 

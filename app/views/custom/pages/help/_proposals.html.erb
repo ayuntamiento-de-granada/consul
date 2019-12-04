@@ -4,31 +4,62 @@
       <%= t("pages.help.proposals.title") %>
     </h3>
     <p>
-      Una Iniciativa Ciudadana/Propuesta es una forma de participación ciudadana dirigida a promover una determinada actuación de interés público local y de competencia municipal por parte del Ayuntamiento. La recogida del número de apoyos de una Iniciativa Ciudadana/Propuesta acredita el interés público de la ciudadanía.
+      Una Iniciativa Ciudadana es una forma de participación ciudadana dirigida a promover una determinada actuación de interés público local y de competencia municipal por parte del Ayuntamiento. La recogida del número de apoyos de una Iniciativa Ciudadana acredita el interés público de la ciudadanía.
     </p>
     <p>
-      Las <span class="text-underline">Iniciativas Ciudadanas/Propuestas</span> impulsan la participación de los ciudadanos en los asuntos públicos.
+      En esta sección podrás ver las Iniciativas Ciudadanas y participar en ellas o incluso crear nuevas. Podrás ver el contenido de cada Iniciativa Ciudadana y decidir si apoyarla o no.
     </p>
     <p>
-      En esta sección podrás ver las Iniciativas Ciudadanas/Propuestas abiertas y participar en ellas o incluso crear nuevas. Podrás ver el contenido de cada Iniciativa Ciudadana/Propuesta y decidir si apoyarla o no.
-    </p>
-    <p>
-      <b>Participa y colabora con tu ciudad!</b>
-    </p>
-    <p>
-      Utiliza el botón “Apoyar” para apoyar una Iniciativa Ciudadana/Propuesta:
+      Utiliza el botón “Apoyar” para <span class="text-underline">apoyar una Iniciativa Ciudadana</span>:
       <%= image_tag("help/proposals_apoyar.png", class: "d-block", alt: "") %>
     </p>
     <p>
-      Utiliza el botón "Crear una propuesta" para crear una Iniciativa Ciudadana/Propuesta:
+      Utiliza el botón "Crear una iniciativa/propuesta" para <span class="text-underline">crear una Iniciativa Ciudadana</span>:
       <%= image_tag("help/proposals_crear.png", class: "d-block", alt: "") %>
     </p>
     <p>
-      Puedes comentar sobre las Iniciativas Ciudadanas(propuestas) y valorar comentarios con los botones Estoy de acuerdo o No estoy de acuerdo:
+      Puedes <span class="text-underline">comentar sobre las Iniciativas Ciudadanas y valorar comentarios</span> con los botones Estoy de acuerdo o No estoy de acuerdo:
       <%= image_tag "help/debates.png", class: "d-block", alt: t("pages.help.debates.image_alt") %>
     </p>
+    <p class="text-bold text-underline">
+      Fases: las fases que sigue una Iniciativa Ciudadana son las siguientes:
+    </p>
     <p>
-      <%= link_to "Ir a Iniciativas Ciudadanas", proposals_path%>
+      <ul>
+        <li>
+          Creación: creación de la Iniciativa por un usuario/a. 
+        </li>
+        <li>
+          Apoyos: recogida de apoyos (2.000+ para que la Iniciativa se registre). 
+        </li>
+        <li>
+          Registro: registro en el Área de Participación Ciudadana del Ayuntamiento de Granada, para su posterior notificación. 
+        </li>
+        <li>
+          Notificación: una vez registrada la Iniciativa, se notificará a los promotores y se trasladará al área competente del Ayuntamiento para su Valoración. 
+        </li>
+        <li>
+          Valoración: se decidirá si dicha Iniciativa se rechaza o se acoge y pasa de esta forma a ser puesta en marcha. 
+        </li>
+        <li>
+          Puesta en marcha: se llevará a cabo una actuación municipal, ya sea un Proceso Participativo o directamente una intervención local.
+        </li>
+      </ul>
+    </p>
+    <p class="text-bold text-underline">
+      Iniciativas Ciudadanas por Distritos:
+    </p>
+    <p>
+      Desde la sección de Iniciativas Ciudadanas podrás navegar a la sección de Distritos, en la que encontrarás los distintos distritos de Granada.
+      <br>
+      En dicha sección puedes visualizar todos los distritos de Granada y un mapa con sus delimitaciones. Puedes visualizar las Iniciativas Ciudadanas por distritos, utilizando o bien la lista de distritos o el mapa de la sección. 
+    </p>
+
+
+    <p>
+      <%= link_to "Ir a Distritos", map_proposals_path %>
+      <br>
+      <%= link_to "Ir a Iniciativas Ciudadanas", proposals_path %>
     </p>
   </div>
 </div>

@@ -9,7 +9,7 @@ es:
       guide: "Aquí encontrarás ayuda sobre Granada Decide, el funcionamiento de las Iniciativas Ciudadanas (propuestas) y de los procesos participativos. También podrás encontrar información sobre los Órganos de Participación."
       menu:
         debates: "Debates Públicos"
-        proposals: "Iniciativas Ciudadanas (propuestas)"
+        proposals: "Iniciativas Ciudadanas/Propuestas"
         budgets: "Presupuestos Participativos"
         polls: "Votaciones Populares"
         other: "Otra información de interés"
@@ -23,7 +23,7 @@ es:
         image_alt: "Botones para valorar los debates"
         figcaption: 'Botones "Estoy de acuerdo" y "No estoy de acuerdo" para valorar los debates.'
       proposals:
-        title: "Iniciativas Ciudadanas (propuestas)"
+        title: "Iniciativas Ciudadanas/Propuestas"
         description: "En la sección de %{link} puedes plantear propuestas para que el Ayuntamiento las lleve a cabo. Las propuestas recaban apoyos, y si alcanzan los apoyos suficientes se someten a votación ciudadana. Las propuestas aprobadas en estas votaciones ciudadanas son asumidas por el Ayuntamiento y se llevan a cabo."
         link: "propuestas ciudadanas"
         image_alt: "Botón para apoyar una propuesta"

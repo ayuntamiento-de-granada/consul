@@ -240,7 +240,7 @@ header {
       border-left: none;
     }
     li:hover {
-      background: $brand;
+      background: #5ca4b0;
 
       a {
         color: #fff;
@@ -293,7 +293,7 @@ header {
 
       li {
         display: block;
-        background: $brand;
+        background: #5ca4b0;
         border-top: 1px solid #fff;
         white-space: nowrap;
         a {
@@ -801,4 +801,9 @@ position: relative;
 /*************************************************/
 .jumbo-budget {
   background-color: #4293b1;
+}
+
+.callout.warning > a,
+.callout.warning > a:hover {
+  color: inherit;
 }

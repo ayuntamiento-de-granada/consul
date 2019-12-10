@@ -1,0 +1,6 @@
+es:
+  activerecord:
+    models:
+      proposal:
+        one: "Iniciativa ciudadana"
+        other: "Iniciativas ciudadanas"

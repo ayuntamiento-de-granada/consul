@@ -12,8 +12,8 @@
     <div class="small-12 medium-9 column">
       <h2><%= t("pages.help.title", org: "Granada Decide") %></h2>
       <p>
-        Aquí encontrarás ayuda sobre Granada Decide, el funcionamiento de las Iniciativas Ciudadanas <b>(propuestas)</b> y de los <b>procesos participativos</b>.
-        <br>
+        Aquí encontrarás ayuda sobre Granada Decide, el funcionamiento de las <b>Iniciativas Ciudadanas (propuestas)</b> y de los <b>procesos participativos</b>.
+        <br> <br>
         También podrás encontrar información sobre los <b>Órganos de Participación</b>.
       </p>
     </div>
@@ -60,13 +60,13 @@
       <% if feature?(:budgets) %>
         <%= render "pages/help/budgets" %>
       <% end %>
-
+<!--
       <% if feature?(:debates) %>
         <%= render "pages/help/debates" %>
       <% end %>
-
+-->
       <% if feature?(:legislation) %>
-        <%= render "pages/help/processes" %>
+         <%= render "pages/help/debates" %>
       <% end %>
     </div>
     <div class="small-12 medium-4 large-3 column more-info-sidebar">

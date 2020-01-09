@@ -565,7 +565,6 @@ position: relative;
   font-size: $small-font-size;
   padding-top: $line-height / 2;
   max-width: initial;
-  position: absolute;
   bottom: 0px;
   width: 100%;
 
@@ -623,6 +622,11 @@ position: relative;
       text-align: center;
     }
   }
+}
+
+footer .feder {
+      font-size: 0.7rem;
+    text-align: center;
 }
 
 /*************************************************/

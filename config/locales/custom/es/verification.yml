@@ -45,8 +45,8 @@ es:
         flash:
           success: Residencia verificada
       new:
-        accept_terms_text: Acepto %{terms_url} al Padrón
-        accept_terms_text_title: Acepto los términos de acceso al Padrón
+        accept_terms_text: Acepto las %{terms_url} 
+        accept_terms_text_title: Acepto las condiciones de uso
         date_of_birth: Fecha de nacimiento
         document_number: Número de documento
         document_number_help_title: Ayuda
@@ -62,7 +62,7 @@ es:
         form_errors: evitaron verificar tu residencia
         postal_code: Código postal
         postal_code_note: Para verificar tus datos debes estar empadronado
-        terms: los términos de acceso
+        terms: condiciones de uso
         title: Verificar residencia
         verify_residence: Verificar residencia
     sms:

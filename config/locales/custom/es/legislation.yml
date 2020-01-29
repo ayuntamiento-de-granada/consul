@@ -68,7 +68,7 @@ es:
         section_header:
           icon_alt: Icono de legislación colaborativa
           title: Debates Públicos
-          help: Ayuda sobre los debates públicos
+          help: Ayuda sobre los Debates Públicos
         section_footer:
           title: Ayuda sobre los Debates Públicos
           description: El Debate Público como proceso de deliberación participativa contrasta argumentos y motivaciones expuestos en el mismo con el objetivo de conocer los intereses y las posiciones.
@@ -106,7 +106,7 @@ es:
         next_question: Siguiente pregunta
         first_question: Primera pregunta
         share: Compartir
-        title: Proceso de legislación colaborativa
+        title: Debate público
       participation:
         phase_not_open: Esta fase no está abierta
         organizations: Las organizaciones no pueden participar en el debate

@@ -46,7 +46,7 @@ es:
       section_header:
         icon_alt: Icono de Presupuestos participativos
         title: Presupuestos participativos
-        help: Ayuda sobre Presupuestos Participativos
+        help: Ayuda sobre los Presupuestos Participativos
         all_phases: Ver todas las fases
       all_phases: Fases de los presupuestos participativos
       map: Proyectos localizables geográficamente
@@ -56,7 +56,7 @@ es:
       finished_budgets: Presupuestos participativos terminados
       see_results: Ver resultados
       section_footer:
-        title: Ayuda sobre Presupuestos Participativos
+        title: Ayuda sobre los Presupuestos Participativos
         description: Los Presupuestos Participativos son procesos relacionados con proyectos de gastos y están definidos como procesos de participación ciudadana.
       milestones: Seguimiento de proyectos
     investments:
